@@ -1,31 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
 
-    const images = [
-        'img/bg1.jpg',
-        'img/bg2.jpg',
-        'img/bg3.jpg',
-        'img/bg4.jpg',
-        'img/bg5.jpg'
-    ];
+  setInterval(() => {
+    slides[current].classList.remove("active");
 
-    let current = 0;
-    const slider = document.querySelector('.slider');
+    current = (current + 1) % slides.length;
 
-    if (!slider) return;
-
-    // imagem inicial
-    slider.style.backgroundImage = `url("${images[current]}")`;
-    slider.style.opacity = 1;
-
-    setInterval(() => {
-        slider.style.opacity = 0;
-
-        setTimeout(() => {
-            current = (current + 1) % images.length;
-            slider.style.backgroundImage = `url("${images[current]}")`;
-            slider.style.opacity = 1;
-        }, 1300);
-
-    }, 7000);
-
+    slides[current].classList.add("active");
+  }, 4000);
 });
