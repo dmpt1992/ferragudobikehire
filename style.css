@@ -348,3 +348,9 @@ body {
     font-size: 9px;
   }
 }
+@media (max-width: 650px) {
+  .hero-card h1 {
+    font-size: 28px;
+    line-height: 1.05;
+  }
+}
