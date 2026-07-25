@@ -221,11 +221,15 @@ h1 {
     width: 100px;
   }
 
-  .top-whatsapp {
-    display: inline-block;
-    padding: 8px 14px;
-    font-size: 0.8rem;
-  }
+.top-whatsapp {
+  display: inline-block;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+
+  background: #25d366;
+  color: #fff;
+  border: 1px solid #25d366;
+}
 
   /* esconder botão whatsapp de baixo */
   .desktop-whatsapp {
